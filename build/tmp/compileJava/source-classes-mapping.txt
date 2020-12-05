@@ -1,0 +1,2 @@
+com/doit/basicalgorithm/Max3.java
+ com.doit.basicalgorithm.Max3
