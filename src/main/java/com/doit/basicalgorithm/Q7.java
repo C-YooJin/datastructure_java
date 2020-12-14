@@ -12,9 +12,7 @@ public class Q7 {
 
         for(int i = 1; i <= n; i++) {
             sum += i;
-            result + 
-
+            result +
         }
-
     }
 }
