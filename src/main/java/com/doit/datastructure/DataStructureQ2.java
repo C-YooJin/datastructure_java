@@ -4,24 +4,37 @@ import java.util.Scanner;
 
 public class DataStructureQ2 {
     static void swap(int[] a, int idx1, int idx2) {
-
+        System.out.println("a[" + idx1 + "]과(와) a[" + idx2 + "]를 교환합니다.");
+        int t = a[idx1];
+        a[idx1] = a[idx2];
+        a[idx2] = t;
     }
 
-    static void reverse(){
-
+    static void reverse(int[] a){
+        for(int i=0; i < a.length / 2; i++){
+            System.out.println(a);
+            swap(a, i, a.length - i - 1);
+        }
     }
 
-    public static int main() {
+    public static void main() {
         Scanner stdIn = new Scanner(System.in);
-        System.out.println("배열 요솟수 입력: ");
+
+        System.out.println("요소 개수 입력: ");
         int num = stdIn.nextInt();
 
-        // 요솟수가 num개인 배열 a 생성
-        int[] a = new int[num];
+        int[] x = new int[num];
 
-        for(int i = 0; i < num; i++) {
-            System.out.println("요소의 값을" + num + "개 입력해주세요 ");
-            a[i] = stdIn.nextInt();
+        for(int i = 0; i < num; i ++){
+            System.out.println("x[" + i + "]");
+            int value = stdIn.nextInt();
+            x[i] = value;
         }
+//        System.out.println(x);
+
+        reverse(x);
+
+        System.out.println(x);
+        System.out.println("역순 정렬을 마쳤습니다.");
     }
 }
